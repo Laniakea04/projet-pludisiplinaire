@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="common.css">
+  <title>Mon Profil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li><a href="home.html">Accueil</a></li>
+        <li><a href="profile.html">Mon Profil</a></li>
+        <li><a href="schedule.html">Emploi du Temps</a></li>
+        <li><a href="courses.html">Cours</a></li>
+        <li><a href="news.html">Actualités</a></li>
+        <li><a href="logout.html">Se Déconnecter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="profile" class="section no-hover">
+    <h2>Mon Profil <i id="edit-icon" class="fas fa-pencil-alt"></i></h2>
+    <form id="profile-form">
+      <div class="form-group">
+        <label for="name">Nom:</label>
+        <input type="text" id="name" name="name" value="John Doe" disabled>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="john.doe@example.com" disabled>
+      </div>
+      <div class="form-group">
+        <label for="phone">Téléphone:</label>
+        <input type="tel" id="phone" name="phone" value="+33 123 456 789" disabled>
+      </div>
+      <div class="form-group">
+        <label for="profile-pic">Photo de Profil:</label>
+        <input type="file" id="profile-pic" name="profile-pic" accept="image/*" disabled>
+      </div>
+      <button type="submit" id="save-button" class="hidden">Enregistrer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Votre Faculté. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    const editIcon = document.getElementById('edit-icon');
+    const formFields = document.querySelectorAll('#profile-form input');
+    const saveButton = document.getElementById('save-button');
+
+    editIcon.addEventListener('click', () => {
+      formFields.forEach(field => field.disabled = false);
+      saveButton.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
+

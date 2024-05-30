@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des Enseignants</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div>
+        <a href="index.html">Gestion des Emplois du Temps</a>
+        <ul>
+          <li><a href="ens.html">Enseignants</a></li>
+          <li><a href="salles.html">Salles</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div>
+      <h1>Gestion des Enseignants</h1>
+
+      <form id="enseignant-form">
+        <div>
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" name="nom" required>
+        </div>
+        <div>
+          <label for="prenom">Prénom :</label>
+          <input type="text" id="prenom" name="prenom" required>
+        </div>
+        <div>
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Veuillez entrer une adresse e-mail valide.">
+        </div>
+        <div>
+          <label for="telephone">Téléphone :</label>
+          <input type="tel" id="telephone" name="telephone" required pattern="^\+213\d{9}$" title="Le numéro de téléphone doit commencer par +213 et être suivi de 9 chiffres." value="+213">
+        </div>
+        <div>
+          <label for="departement">Département :</label>
+          <select id="departement" name="departement" required>
+            <option value="">Sélectionnez un département</option>
+            <option value="systeme_information">Systèmes d'Information</option>
+            <option value="ds_intel_artificielle">Data Science et Intelligence Artificielle</option>
+          </select>
+        </div>
+        <div>
+          <label for="grade">Grade :</label>
+          <select id="grade" name="grade" required>
+            <option value="">Sélectionnez un grade</option>
+            <option value="assistant">Assistant</option>
+            <option value="maitre_assistant">Maître Assistant</option>
+            <option value="maitre_de_conferences">Maître de Conférences</option>
+            <option value="professeur">Professeur</option>
+          </select>
+        </div>
+        <button type="submit">Enregistrer</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div>&copy; 2023 Gestion des Emplois du Temps. Tous droits réservés.</div>
+  </footer>
+</body>
+</html>    

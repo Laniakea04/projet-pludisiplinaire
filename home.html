@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <style>
+    /* Styles for the home page */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .home-hero {
+      background-image: linear-gradient(to right, #3498db, #2980b9, #2471a3);
+      padding: 6rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .home-content {
+      text-align: center;
+      max-width: 800px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .home-content h1 {
+      font-size: 3.5rem;
+      color: #fff;
+      margin-bottom: 1.6rem;
+      text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.8s ease;
+    }
+
+    .home-content p {
+      font-size: 1.6rem;
+      color: #f0f0f0;
+      margin-bottom: 2.8rem;
+      line-height: 1.6;
+      animation: fadeIn 1s ease;
+    }
+
+    .home-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.6rem;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .home-button {
+      display: inline-block;
+      background-color: #fff;
+      color: #2980b9;
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 1.2rem 2.4rem;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .home-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .home-image {
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      transform: translateY(-50%);
+      max-width: 40%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      animation: float 6s ease-in-out infinite, fadeIn 1.4s ease;
+    }
+
+    .home-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 4rem 2rem 8rem 2rem; /* Adjusted margin to make space for the footer */
+    }
+
+    .home-feature {
+      background-color: #fff;
+      padding: 2.4rem;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .home-feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .home-feature h3 {
+      color: #2980b9;
+      margin-bottom: 1.2rem;
+    }
+
+    .home-feature p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #2980b9;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: auto;
+      box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    footer:hover {
+      background-color: #2471a3;
+      color: #e0e0e0;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(-50%);
+      }
+      50% {
+        transform: translateY(-55%);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .home-hero {
+        padding: 5rem 1.6rem;
+      }
+
+      .home-content h1 {
+        font-size: 2.8rem;
+      }
+
+      .home-content p {
+        font-size: 1.4rem;
+      }
+
+      .home-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .home-button {
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+      }
+
+      .home-image {
+        max-width: 50%;
+        right: 1rem;
+      }
+
+      .home-features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="home-hero">
+    <div class="home-content">
+      <h1>Bienvenue sur le Portail Étudiant</h1>
+      <p>Accédez à vos informations, emploi du temps, cours et plus encore.</p>
+      <div class="home-buttons">
+        <a href="profile.html" class="home-button">Découvrir</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-features">
+    <div class="home-feature">
+      <h3>Votre Emploi du Temps</h3>
+      <p>Consultez facilement votre emploi du temps et gardez une trace de vos cours.</p>
+    </div>
+    <div class="home-feature">
+      <h3>Actualités du Campus</h3>
+      <p>Restez informé des dernières nouvelles et événements de votre université.</p>
+    </div>
+    <div class="home-feature">
+      <h3>Gestion de Vos Cours</h3>
+      <p>Accédez à vos informations de cours, polycopiés et devoirs en un seul endroit.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 USTHB. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

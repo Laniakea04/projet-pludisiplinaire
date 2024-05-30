@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des Salles</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div>
+        <a href="index.html">Gestion des Emplois du Temps</a>
+        <ul>
+          <li><a href="ens.html">Enseignants</a></li>
+          <li><a href="salles.html">Salles</a></li>
+       </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div>
+      <h1>Gestion des Salles</h1>
+
+      <form id="salle-form">
+        <div>
+          <label for="nom_salle">Nom de la Salle :</label>
+          <input type="text" id="nom_salle" name="nom_salle" required>
+        </div>
+        <div>
+          <label for="type_salle">Type de Salle :</label>
+          <select id="type_salle" name="type_salle" required>
+            <option value="">Sélectionnez un type</option>
+            <option value="td">TD</option>
+            <option value="tp">TP</option>
+            <option value="cours">Cours</option>
+          </select>
+        </div>
+        <div>
+          <label for="capacite">Capacité :</label>
+          <input type="number" id="capacite" name="capacite" required>
+        </div>
+        <button type="submit">Enregistrer</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div>&copy; 2023 Gestion des Emplois du Temps. Tous droits réservés.</div>
+  </footer>
+</body>
+</html>
